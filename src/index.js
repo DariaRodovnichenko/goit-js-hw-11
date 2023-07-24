@@ -82,14 +82,25 @@ async function onSubmitForm(evt) {
       createMarkup(response.hits);
       lightBox.refresh();
       endText.classList.add('is-hidden');
+
+      const { height: cardHeight } = document
+        .querySelector('.gallery')
+        .firstElementChild.getBoundingClientRect();
+
+      window.scrollBy({
+        top: cardHeight * 2,
+        behavior: 'smooth',
+      });
     }
-    if (response.totalHits <= 1) {
+
+    if (response.totalHits === 0) {
       gallery.innerHTML = '';
-      Notify.info(
+      Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
       loadBtn.classList.add('is-hidden');
       endText.classList.remove('is-hidden');
+      return;
     }
   } catch (error) {
     console.log(error.message);
