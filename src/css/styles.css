@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* $mobile: 320px;
+$tablet: 768px;
+$desktop: 1440px; */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0 15px;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  background-color: blanchedalmond;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.search-form input {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-form input::placeholder {
+  color: rgb(164, 126, 75);
+}
+
+.search-btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) color 300m linear;
+  color: blanchedalmond;
+  background-color: rgb(164, 126, 75);
+}
+
+.search-btn:hover,
+.search-btn:focus {
+  background-color: rgb(81, 62, 36);
+  color: white;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.photo-card {
+  width: 350px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 8px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.photo-card img {
+  display: block;
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.load-more {
+  width: 100px;
+  height: 40px;
+  margin: 50px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: blanchedalmond;
+  background-color: rgb(164, 126, 75);
+}
+
+.load-more:hover {
+  background-color: rgb(81, 62, 36);
+  color: white;
+}
+
+.text {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.is-hidden {
+  display: none;
+}
